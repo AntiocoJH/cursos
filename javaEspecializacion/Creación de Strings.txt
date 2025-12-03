@@ -1,0 +1,70 @@
+Creación de Strings
+
+		Para crear una String en Java, simplemente se utiliza comillas dobles para delimitar el texto. Por ejemplo:
+
+		String nombre = "Alura";
+
+
+En este ejemplo, la variable "nombre" recibe una String con el texto "Alura". Es posible concatenar dos o más Strings utilizando el operador +, por ejemplo:
+
+		String saludo = "Hola, ";
+		String nombre = "Alura";
+		String mensaje = saludo + nombre + "!";
+
+Comparación de Strings
+
+		En Java, es posible comparar dos Strings utilizando el operador ==. Sin embargo, este operador solo verifica si las dos variables apuntan al mismo objeto en la memoria, no si el contenido de las Strings es igual. Para 		comparar el contenido de dos Strings, es necesario utilizar el método equals(). Por ejemplo:
+
+			String contrasena= "12345";
+			if (contrasena.equals("12345")) {
+   			 System.out.println("Acceso autorizado!");
+			} else {
+    				System.out.println("Contraseña incorrecta.");
+			}
+	Más adelante, también trabajaremos con el método equalsIgnoreCase(), que se utiliza para que la comparación de Strings no distinga entre mayúsculas y minúsculas. Utilizando solo equals, las cadenas "alura" y "Alura" se 	considerarían diferentes.
+
+
+Sintaxis del bloque de texto
+
+		Para crear un bloque de texto en Java, simplemente se utilizan tres comillas dobles para delimitar el texto, seguidas de un salto de línea. Por ejemplo:
+
+		String mensaje = """
+                		  Hola, mundo !
+                  		Este es un Text Block.
+                 		 El permite escribir textos com múltiples lineas
+                		sin necesitar usar caracteres de escape o saltos de linea manualmente o concatenaciones.
+                  		""";
+
+
+En Java, es posible formatear textos y números de diversas maneras. Esto puede ser útil en diferentes situaciones, como al mostrar valores al usuario de una forma más legible.
+
+Una de las formas más comunes de formatear textos en Java es utilizando el método format() de la clase String. Este método permite formatear un texto utilizando marcadores de posición (placeholders), que se representan con el carácter % seguido de una letra que indica el tipo de dato que se insertará en el marcador de posición. Por ejemplo, %s indica que se insertará una cadena en el marcador de posición, %d indica un valor entero y %f indica un valor decimal.
+
+Veamos un ejemplo:
+
+	String nombre = "Maria";
+	int edad = 30;
+	double valor = 55.9999;
+	System.out.println(String.format("Mi nombre es %s, tengo %d años y hoy gasté %.2f dolares", nombre, edad, valor));
+
+En este ejemplo, los valores de las variables "nombre", "edad" y "valor" se pasan como parámetros al método String.format, reemplazando los marcadores de posición %s, %d y %.2f, respectivamente. El resultado impreso será "Mi nombre es María, tengo 30 años y hoy gasté 55.99 dolares". Observa también que el marcador de posición %.2f indica que el valor debe ser formateado con dos decimales.
+
+Este ejemplo de String.format también se puede usar con un bloque de texto (Text Block), donde se utiliza el método que mencioné en clase, formatted, para indicar las variables que se deben utilizar en lugar de los marcadores de posición.
+
+Aquí tienes un ejemplo:
+
+		String nombre = “Juan”;
+		int aulas = 4;
+
+		String mensaje= """
+                 	 Hola, %s!
+                 	 Bienvenido al curso de Java.
+                  	Tendremos %d aulas para mostrarte lo que es necesario para que puedas dar tu primeros pasos en este lenguaje                  """.formatted(nombre, aulas);
+
+			System.out.println(mensaje);
+
+El resultado impreso en la consola será:
+
+Hola, Juan! Bienvenido al curso de Java.
+
+Tendremos 4 aulas para mostrarte lo que es necesario para que puedas dar tu primeros pasos en este lenguaje.
