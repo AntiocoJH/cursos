@@ -1,0 +1,11 @@
+Usamos VISUAL STUDIO CODE  para editor de código
+
+Usamos FIGMA para diseño de pagina sirve de apoyo
+
+
+
+Para la paleta de colores podemos apoyarnos de las siguientes paginas
+	Coolors
+	Adobe Color
+	Color Hunt
+	Color Tool - Material Design
