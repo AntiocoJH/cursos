@@ -1,0 +1,7 @@
+gemini
+sheepgpt
+chatgpt
+Bing.create 
+midjourney
+
+Google colab para transcribir audios
